@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, EmbedBuilder, PermissionsBitField, Permissions, MessageManager, Embed, Collection, Options, ActivityType, Events, ModalBuilder, TextInputBuilder, TextInputStyle,ActionRowBuilder, ButtonBuilder, ButtonStyle } = require(`discord.js`);
+const { Client, GatewayIntentBits, EmbedBuilder, PermissionsBitField, Permissions, MessageManager, Embed, Collection, Options, ActivityType, Events, ModalBuilder, TextInputBuilder, TextInputStyle,ActionRowBuilder, ButtonBuilder, ButtonStyle, SlashCommandBuilder} = require(`discord.js`);
 const fs = require('fs');
 const { type } = require('os');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] }); 
@@ -106,11 +106,13 @@ client.on(Events.InteractionCreate, async interaction => {
                 .setStyle(ButtonStyle.Link)
                 .setURL(`${myArray[myArray.length-1]}`),
             new ButtonBuilder()
-                .setCustomId('delete_session_id')
-                .setLabel('delete')
-                .setStyle(ButtonStyle.Danger)
-                .setEmoji('🗑️')
+            .setCustomId('delete_session_id')
+            .setLabel('delete')
+            .setEmoji('🗑️')
+            .setStyle(ButtonStyle.Danger)
         );
+            
+         
             
             const embed_forest = new EmbedBuilder()
             
@@ -125,8 +127,8 @@ client.on(Events.InteractionCreate, async interaction => {
             })
             .addFields(
                 { name: 'code', value: `${myArray[15]}`},
-                { name: 'starting in', value: `${forest_timing} minutes \n ➡️ <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
-                { name: 'ends in', value: `${myArray[19].split("-")[0]} ${myArray[19].split("-")[1]}s \n ➡️ <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(myArray[19].split("-")[0])+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
+                { name: 'starting in', value: `${forest_timing} minutes \n <:icons8curvedarrow50:1113433706045112351> <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
+                { name: 'ends in', value: `${myArray[19].split("-")[0]} ${myArray[19].split("-")[1]}s \n <:icons8curvedarrow50:1113433706045112351> <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(myArray[19].split("-")[0])+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
                 forest_pom ? {name: 'pomodoro stage', value: `${forest_pom}`, inline: true} : {name: 'pomodoro stage', value: `NA`, inline: true},
             )
             .addFields(
@@ -141,29 +143,32 @@ client.on(Events.InteractionCreate, async interaction => {
             
             .setThumbnail('https://media.discordapp.net/attachments/1085828261776457840/1113857015635251210/clipart1139217.png?width=514&height=515')
             .setImage(
-                fsi ? `${fsi}`: `https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2015%2F04%2F23%2F22%2F00%2Ftree-736885_1280.jpg&tbnid=aVgXecnmQ_f1MM&vet=12ahUKEwiy4b3mmqT_AhWrMbcAHZc3BDcQMygCegUIARCQAQ..i&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnature%2F&docid=Ba_eiczVaD9-zM&w=1280&h=797&itg=1&q=image&ved=2ahUKEwiy4b3mmqT_AhWrMbcAHZc3BDcQMygCegUIARCQAQ`
+                fsi ? `${fsi}`: `https://media.discordapp.net/attachments/1085828261776457840/1114045247488528454/HD_transparent_picture_discord.png?width=1441&height=151`
             )
             
             .setTimestamp()
             .setFooter({
-                text: 'join via copy and paste the code or by clicking the link below! and please dont click delete on someone elses session',
+                text: 'join via copy and paste the code or by clicking the link below!',
                 iconURL: 'https://play-lh.googleusercontent.com/NWRVVF6zXvmcqspJwdFOKcQG6OlsNwpMOxED_DgB6B2BBDeWwAeWZKZxGhgqU0LQVJU=w240-h480-rw'
             });
-         
-                
             
+           
+             
         const event_sucess = new EmbedBuilder()
-        
         .addFields({
-            name: '✅Sucess', value: 'your session has been posted to <#1010629360648212601> sucessfully! \n click the red button on your forest embed to cancel your event and \n PLEASE DONT CLICK DELETE ON SOMEONE ELSES SESSION'
+            name: '✅Sucess', value: 'your session has been posted to <#1096326467702501386> sucessfully! \n click the button below to delete your session'
         })
         .setColor('CDD193')
-        const reply = await interaction.reply({ embeds: [event_sucess], ephemeral: true} );
+        const reply= await interaction.reply({
+            embeds: [event_sucess],
+            
+        });
         setTimeout(() => {
             reply.delete().catch(console.error);
-        }, 20000);
-        const channel = client.channels.cache.get("1010629360648212601");
-        await channel.send({ content: `<@&1010631146679316480>`, embeds: [embed_forest], components: [link_forest]});
+            console.log('message deleted sucessfully');
+        }, 10000);
+        const channel = client.channels.cache.get("1096326467702501386");
+        await channel.send({ content: `<@&1089917087163633725>`, embeds: [embed_forest], components: [link_forest]});
     }
     
 
@@ -238,22 +243,18 @@ client.on('interactionCreate', async (interaction) => {
   
     if (interaction.customId === 'delete_session_id') {
       try {
-        const reply_del = await interaction.reply({ content: 'session deleted by host' });
-        await interaction.message.edit({content: 'session deleted by host'}); // Delete the message
+        const reply_delete = await interaction.reply({ content: 'session deleted by host' });
+        
+        await interaction.message.edit({ content: 'session deleted by host'}); // Delete the message
         console.log('Message deleted successfully');
         setTimeout(() => {
-            reply_del.delete().catch(console.error);
+            reply_delete.delete().catch(console.error);
             console.log('message deleted sucessfully')
-        }, 3000);
+        }, 5000);
       } catch (error) {
         console.error('Error deleting message:', error);
       }
     }
   });
   
-// Assuming you have a message creation event handler
-// Assuming you have a message creation event handler
-
-  
-
-  
+ 
