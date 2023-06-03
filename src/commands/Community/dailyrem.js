@@ -21,9 +21,9 @@ module.exports = {
         async execute(interaction, client) {
             console.log(interaction.options);
             const Day_input = interaction.options._hoistedOptions[0]['value'];
-            const inspquote = interaction.options._hoistedOptions[1]['value'];
+            const inspquote = interaction.options._hoistedOptions.length > 1 ? interaction.options._hoistedOptions[1]['value'] : null;
             const dailyrem = new EmbedBuilder()
-            .setTitle(`Day: ${Day_input}`)
+            .setTitle(`**Day: ${Day_input}**`)
             .setFields(
                 {name: '📝 **Daily To-Do List Reminder**', value: 'Hello everyone! Just a friendly reminder to take a moment and jot down your daily to-do list. Planning your tasks can help you stay organized and focused throughout the day.\n Remember to prioritize your tasks, set achievable goals, and tackle them one step at a time. Feel free to share your progress or ask for assistance if needed. Lets make today a productive day! \n Have a great day and happy tasking! 🌟'},
                 inspquote? {name: '📜quotes', value: `${inspquote}`}: {name: '📜quotes', value: '`The secret of your future is hidden in your daily routine.`'}
@@ -38,7 +38,7 @@ module.exports = {
                 }, 30000);
 
                 const channel_drem = client.channels.cache.get("1085798501117612112");
-                await channel_drem.send({ content: `<@&1086576573387378799>`, embeds: [dailyrem]});
+                await channel_drem.send({ content: `<@&1032396670215934025>`, embeds: [dailyrem]});
 
 
 
