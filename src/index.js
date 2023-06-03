@@ -75,7 +75,6 @@ client.on(Events.InteractionCreate, async interaction => {
         const str = interaction.fields.getTextInputValue("forest_link");
         const fsi = interaction.fields.getTextInputValue("forest_image_id");
         const curTime = new Date();
-        console.log(curTime.getFullYear(), curTime.getMonth());
         cur = "";
         space = false;
         myArray = []
@@ -94,10 +93,8 @@ client.on(Events.InteractionCreate, async interaction => {
             }
         }
         if (!space) myArray.push(cur);
-        // console.log(myArray[15], myArray[19].split("-"), myArray[20], myArray[33]);
         var roomName = "", i = 20;
         while (i < myArray.length && myArray[i] !== "with") roomName += myArray[i++]+" ";
-        console.log(myArray[myArray.length-1]);
         const link_forest = new ActionRowBuilder()
         .addComponents(
             new ButtonBuilder()
