@@ -19,7 +19,6 @@ module.exports = {
         
         
         async execute(interaction, client) {
-            console.log(interaction.options);
             const Day_input = interaction.options._hoistedOptions[0]['value'];
             const inspquote = interaction.options._hoistedOptions.length > 1 ? interaction.options._hoistedOptions[1]['value'] : null;
             const dailyrem = new EmbedBuilder()
@@ -34,10 +33,9 @@ module.exports = {
                 {content: 'your daily reminder has been sent!'});
                 setTimeout(() => {
                     confmsg.delete().catch(console.error);
-                    console.log('message deleted sucessfully');
                 }, 30000);
 
-                const channel_drem = client.channels.cache.get("1085798501117612112");
+                const channel_drem = client.channels.cache.get("1011000578660372541");
                 await channel_drem.send({ content: `<@&1032396670215934025>`, embeds: [dailyrem]});
 
 
