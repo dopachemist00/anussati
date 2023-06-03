@@ -68,7 +68,6 @@ client.on(Events.InteractionCreate, async interaction => {
         const str = interaction.fields.getTextInputValue("forest_link");
         const fsi = interaction.fields.getTextInputValue("forest_image_id");
         const curTime = new Date();
-        console.log(curTime.getFullYear(), curTime.getMonth());
         cur = "";
         space = false;
         myArray = []
@@ -86,8 +85,7 @@ client.on(Events.InteractionCreate, async interaction => {
         }
         if (!space) myArray.push(cur);
         var roomName = "", i = 20;
-        while (i < myArray.length && myArray[i] !== "with") roomName += myArray[i++] + " ";
-        console.log(myArray[myArray.length - 1]);
+        while (i < myArray.length && myArray[i] !== "with") roomName += myArray[i++]+" ";
         const link_forest = new ActionRowBuilder()
             .addComponents(
                 new ButtonBuilder()
@@ -121,7 +119,7 @@ client.on(Events.InteractionCreate, async interaction => {
             )
             .setThumbnail('https://media.discordapp.net/attachments/1085828261776457840/1113857015635251210/clipart1139217.png?width=514&height=515')
             .setImage(
-                fsi ? `${fsi}` : `https://media.discordapp.net/attachments/1085828261776457840/1114045247488528454/HD_transparent_picture_discord.png?width=1441&height=151`
+                fsi ? `${fsi}`: `https://media.discordapp.net/attachments/1085828261776457840/1114045247488528`
             )
             .setTimestamp()
             .setFooter({
@@ -129,29 +127,29 @@ client.on(Events.InteractionCreate, async interaction => {
                 iconURL: 'https://play-lh.googleusercontent.com/NWRVVF6zXvmcqspJwdFOKcQG6OlsNwpMOxED_DgB6B2BBDeWwAeWZKZxGhgqU0LQVJU=w240-h480-rw'
             });
         const event_sucess = new EmbedBuilder()
-            .addFields({
-                name: '✅Sucess', value: 'your session has been posted to <#1096326467702501386> sucessfully! \n click the button below to delete your session'
-            })
-            .setColor('CDD193')
-        const reply = await interaction.reply({
-            embeds: [event_sucess],
+        .addFields({
+            name: '✅Sucess', value: 'your session has been posted to <#1096326467702501386> sucessfully! \n go to the embed to delete your session'
+        })
+        .setColor('CDD193')
+        const reply= await interaction.reply({
+            embeds: [event_sucess], ephemeral: true
+            
         });
         setTimeout(() => {
             reply.delete().catch(console.error);
-            console.log('message deleted sucessfully');
         }, 10000);
-        const channel = client.channels.cache.get("1096326467702501386");
-        await channel.send({ content: `<@&1089917087163633725>`, embeds: [embed_forest], components: [link_forest] });
+        const channel = client.channels.cache.get("1010629360648212601");
+        await channel.send({ content: `<@&1010631146679316480>`, embeds: [embed_forest], components: [link_forest]});
     }
 })
 
 client.on(Events.InteractionCreate, async (interaction) => {
     if (interaction.isButton()) {
         if (interaction.customId === 'forest_session_event') {
-            console.log("Button Event");
-            const forest_info_modal = new ModalBuilder()
-                .setCustomId("modal_id")
-                .setTitle("create your forest session");
+            const forest_info_modal= new ModalBuilder()
+            .setCustomId("modal_id")
+            .setTitle("create your forest session");
+            
             const forest_link = new TextInputBuilder()
                 .setCustomId('forest_link')
                 .setRequired(true)
