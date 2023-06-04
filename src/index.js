@@ -124,8 +124,8 @@ client.on(Events.InteractionCreate, async interaction => {
             })
             .addFields(
                 { name: 'code', value: `${myArray[15]}`},
-                { name: 'starting in', value: `${forest_timing} minutes \n <:icons8curvedarrow50:1113433706045112351> <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
-                { name: 'ends in', value: `${myArray[19].split("-")[0]} ${myArray[19].split("-")[1]}s \n <:icons8curvedarrow50:1113433706045112351> <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(myArray[19].split("-")[0])+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
+                { name: 'starting in', value: `${forest_timing} minutes \n ➡️ <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
+                { name: 'ends in', value: `${myArray[19].split("-")[0]} ${myArray[19].split("-")[1]}s \n ➡️ <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(myArray[19].split("-")[0])+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
                 forest_pom ? {name: 'pomodoro stage', value: `${forest_pom}`, inline: true} : {name: 'pomodoro stage', value: `NA`, inline: true},
             )
             .addFields(
