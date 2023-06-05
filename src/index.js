@@ -229,7 +229,7 @@ client.on(Events.InteractionCreate, async interaction => {
             });
         const event_sucess = new EmbedBuilder()
         .addFields({
-            name: '✅Sucess', value: 'your session has been posted to <#1096326467702501386> sucessfully! \n go to the embed to delete your session'
+            name: '✅Sucess', value: 'your session has been posted to <#1010629360648212601> sucessfully! \n go to the embed to delete your session'
         })
         .setColor('CDD193')
         const reply= await interaction.reply({
