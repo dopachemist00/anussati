@@ -28,7 +28,7 @@ module.exports = {
             .setColor('D6C18A')
             .setTimestamp()
         const confmsg = await interaction.reply(
-            { content: 'your daily reminder has been sent!' });
+            { content: 'your daily reminder has been sent!', ephemeral: true });
         setTimeout(() => {
             confmsg.delete().catch(console.error);
             console.log('message deleted sucessfully');

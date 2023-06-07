@@ -115,10 +115,81 @@ const treeMap = {
     'tinytan - suga (larch) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942917321166949/tinytan_-_suga_larch.png?width=635&height=635',
     'tinytan - j-hope (buttercup) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942840057901076/tinytan_-_j-hope_buttercup.png?width=635&height=635',
     'tinytan - jimin (spirea) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942915299508325/tinytan_-_jimin_spirea.png?width=635&height=635',
-    'tinytan - V (wintersweet) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942917736407131/tinytan_-_v_wintersweet.png?width=635&height=635',
+    'TinyTAN - V (Wintersweet) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942917736407131/tinytan_-_v_wintersweet.png?width=635&height=635',
     'tinytan - jung kook (tiger flower) ':'https://media.discordapp.net/attachments/1085828261776457840/1114942916301947000/tinytan_-_jung_kook_tiger_flower.png?width=635&height=635' ,
     'pear tree house ' : 'https://media.discordapp.net/attachments/1085828261776457840/1114942701369040976/pear_tree_house.png?width=635&height=635',
     
+
+
+
+};
+const colorMap = {
+    '9th anniversary cake tree ' : 'E5BC6A',
+    '8th anniversary cake tree ' : 'B67F40',
+    '7th anniversary cake tree ':'EAB183',
+    '6th anniversary cake tree ': 'E3C7A4',
+    'tinytan - rm (clematis) ': 'C5B3B3',
+    'tinytan - jin (rumex) ': 'E5C8AE',
+    'tinytan - suga (larch) ': 'C9D2CF',
+    'tinytan - j-hope (buttercup) ': '5CD90',
+    'tinytan - jimin (spirea) ': 'E5D7AC',
+    'tinytan - V (wintersweet) ': 'CCBEA8',
+    'tinytan - jung kook (tiger flower) ': 'E2AD81',
+    'strawberry chiffon cake ': 'F4B6AF',
+    'blueberry cake ': 'DFC3C9',
+    'black forest cake ': 'C3C29D',
+    'lemon cake ': 'FBD79A',
+    'matcha azuki cake ': 'EFEAB4',
+    'tiramisu ': 'AC7A4C',
+    'cherry cheese cake ': 'EC9A9A',
+    'chocolate strawberry cake ': 'F48484',
+    'purple oak tree ': '9B75AE',
+    'yellow oak tree ': 'E5B13F',
+    'pink oak tree ': 'F4B8A4',
+    'blue oak tree ':'67ACCF',
+    'earth day tree ': '5890D0',
+    'money tree ': 'E37D20',
+    
+    'space tree ': 'FBBC74',
+    'unicorn tree ': 'E8D0E9',
+    'twilight guardian ': '35A0B5',
+    'wishing tree ': 'C8D2DB',
+    'cherry blossom ': 'F2CFDC',
+    'pumpkin ':'E18705',
+    'scarecrow ': '044686',
+    'ginkgo ': 'EFAB10',
+    'wisteria ': 'C19EDE',
+    'candy tree ': 'EDB7BC',
+    'maple ': 'D44624',
+    'rose ': 'D15746',
+    'sunflower ': 'F1B912',
+    'rafflesia ': 'BC3E32',
+    'starry tree ': '3D73C6',
+    'carnation ': 'DE445F',
+    'moon tree ': 'F8E0A2',
+    'ghost mushroom ': 'D5D1E2',
+    'cat-tail willow ': 'F1BD1B',
+    'blue flower ': '0B8AD6',
+    'star coral ': 'F4C6AA',
+    'celestial tree ': 'F3E0C7',
+    'water spirit ': '6FD2DC',
+    'sundae tree ': 'EDD0B2',
+    'forest spirit ' : '7AE0C9',
+    'lover tree ': 'DFA795',
+    'lily flower ':'F2EDC9',
+    'tulip ':'E9974C',
+    'plum blossom ':'F3A896',
+    
+    'lavender ':'9371D3',
+    
+    'golden wings ':'F3AF3E',
+    'golden trumpet tree ':'F2CA51',
+    
+    'cosmos ':'EDD8C3',
+    'narcissus ':'E9C451',
+
+
+
 
 
 
@@ -201,7 +272,7 @@ client.on(Events.InteractionCreate, async interaction => {
                     .setStyle(ButtonStyle.Danger)
             );
         const embed_forest = new EmbedBuilder()
-            .setColor('50C878')
+            .setColor(colorMap[roomName.toLowerCase()] !== undefined ? colorMap[roomName.toLowerCase()] : '81B622')
             .setTitle(`${myArray[19]} ${roomName}`)
             .setAuthor({
                 name: `${member}`,
