@@ -187,6 +187,7 @@ const colorMap = {
     
     'cosmos ':'EDD8C3',
     'narcissus ':'E9C451',
+    'pear tree house ' : 'E5B451',
 
 
 
@@ -273,7 +274,7 @@ client.on(Events.InteractionCreate, async interaction => {
             );
         const embed_forest = new EmbedBuilder()
             .setColor(colorMap[roomName.toLowerCase()] !== undefined ? colorMap[roomName.toLowerCase()] : '81B622')
-            .setTitle(`${myArray[19]} ${roomName}`)
+            .setTitle(`**${myArray[19]} ${roomName}**`)
             .setAuthor({
                 name: `${member}`,
                 iconURL: `${member_icon}`
@@ -326,31 +327,31 @@ client.on(Events.InteractionCreate, async (interaction) => {
             const forest_link = new TextInputBuilder()
                 .setCustomId('forest_link')
                 .setRequired(true)
-                .setLabel('paste your forest link here')
-                .setPlaceholder('e.g: Time to put down your phone and get back to work! Enter my room code: 9GA3RSG...')
+                .setLabel('e.g. paste your forest link here')
+                .setPlaceholder('time to put down your phone and get back to work! Enter my room code: 9GA3RSG...')
                 .setStyle(TextInputStyle.Paragraph);
             const forest_session_goal = new TextInputBuilder()
                 .setCustomId('forest_goal')
                 .setLabel('current number of session')
-                .setPlaceholder('e.g 1/6')
+                .setPlaceholder('e.g. 1/6')
                 .setStyle(TextInputStyle.Short)
                 .setRequired(false);
             const forest_session_timeing = new TextInputBuilder()
                 .setCustomId('forest_starts_in')
-                .setLabel('time until your session starts(in minutes)')
-                .setPlaceholder(' e.g : 5')
+                .setLabel('time until your session starts(minutes)')
+                .setPlaceholder("e.g. 5 'just write the number'")
                 .setStyle(TextInputStyle.Short)
                 .setRequired(true);
             const forest_session_addremakrs = new TextInputBuilder()
                 .setCustomId('Forest_remarks')
                 .setLabel('additional remarks')
-                .setPlaceholder('e.g Success is no accident. It is hard work, perseverance...')
+                .setPlaceholder('e.g. Success is no accident. It is hard work, perseverance...')
                 .setStyle(TextInputStyle.Paragraph)
                 .setRequired(false);
             const forest_image = new TextInputBuilder()
                 .setCustomId('forest_image_id')
                 .setLabel('forest session image(completely optional :3)')
-                .setPlaceholder('paste your image link (e.g. https://media4.giphy.com/media/...)')
+                .setPlaceholder('e.g. https://media4.giphy.com/media.gif')
                 .setStyle(TextInputStyle.Short)
                 .setRequired(false);
             const forest_link_action = new ActionRowBuilder().addComponents(forest_link);
