@@ -168,7 +168,7 @@ const colorMap = {
     'carnation ': 'DE445F',
     'moon tree ': 'F8E0A2',
     'ghost mushroom ': 'D5D1E2',
-    'cat-tail willow ': 'F1BD1B',
+    'cat-tail willow ': '9F3817',
     'blue flower ': '0B8AD6',
     'star coral ': 'F4C6AA',
     'celestial tree ': 'F3E0C7',
