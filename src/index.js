@@ -291,14 +291,14 @@ client.on(Events.InteractionCreate, async interaction => {
             .addFields(
                 forest_addrem ? { name: 'additional remarks', value: `${forest_addrem}` } : { name: 'additional remarks', value: `NA`, inline: true },
             )
-            .setThumbnail(treeMap[roomName.toLowerCase()] !== undefined ? treeMap[roomName.toLowerCase()] : 'https://media.discordapp.net/attachments/1085828261776457840/1113857015635251210/clipart1139217.png?width=514&height=515')
+            .setThumbnail(treeMap[roomName.toLowerCase()] !== undefined ? treeMap[roomName.toLowerCase()] : 'https://media.discordapp.net/attachments/1085828261776457840/1121717585071845426/icons8-forest-94.png?width=129&height=129')
             .setImage(
                 fsi ? `${fsi}`: `https://media.discordapp.net/attachments/1085828261776457840/1114045247488528`
             )
             .setTimestamp()
             .setFooter({
                 text: 'join via copy and paste the code or by clicking the link below! \n and please dont click delete on someone elses session' ,
-                iconURL: 'https://media.discordapp.net/attachments/1085828261776457840/1121710001715691550/icons8-forest-app-64.png?width=88&height=88'
+                iconURL: 'https://media.discordapp.net/attachments/1085828261776457840/1121717585071845426/icons8-forest-94.png?width=129&height=129'
             });
         const event_sucess = new EmbedBuilder()
         .addFields({
