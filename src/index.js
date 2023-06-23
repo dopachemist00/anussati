@@ -298,7 +298,7 @@ client.on(Events.InteractionCreate, async interaction => {
             .setTimestamp()
             .setFooter({
                 text: 'join via copy and paste the code or by clicking the link below! \n and please dont click delete on someone elses session' ,
-                iconURL: 'https://play-lh.googleusercontent.com/NWRVVF6zXvmcqspJwdFOKcQG6OlsNwpMOxED_DgB6B2BBDeWwAeWZKZxGhgqU0LQVJU=w240-h480-rw'
+                iconURL: 'https://media.discordapp.net/attachments/1085828261776457840/1121710001715691550/icons8-forest-app-64.png?width=88&height=88'
             });
         const event_sucess = new EmbedBuilder()
         .addFields({
