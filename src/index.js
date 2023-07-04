@@ -22,11 +22,11 @@ const commandFolders = fs.readdirSync("./src/commands");
     client.handleComponents();
 })();
 const treeMap = {
-    "apple tree " : "https://media.discordapp.net/attachments/1085828261776457840/1114928631458836550/apple_tree.png?width=635&height=635",
-    "tangerine tree " : 'https://media.discordapp.net/attachments/1085828261776457840/1114942839630069882/tangerine_tree.png?width=635&height=635',
+    "apple tree ": "https://media.discordapp.net/attachments/1085828261776457840/1114928631458836550/apple_tree.png?width=635&height=635",
+    "tangerine tree ": 'https://media.discordapp.net/attachments/1085828261776457840/1114942839630069882/tangerine_tree.png?width=635&height=635',
     'lotus ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942510712758282/lotus.png?width=635&height=635',
     'narcissus ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942632792182834/narcissus.png?width=635&height=635',
-    'cosmos ':'https://media.discordapp.net/attachments/1085828261776457840/1114942318399721552/cosmos.png?width=635&height=635',
+    'cosmos ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942318399721552/cosmos.png?width=635&height=635',
     'osmanthus ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942633962389534/osmanthus.png?width=635&height=635',
     'golden trumpet tree ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942507697053739/golden_trumpet_tree.png?width=635&height=635',
     'golden wings ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942508036788314/golden_wings.png?width=635&height=635',
@@ -41,7 +41,7 @@ const treeMap = {
     'lover tree ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942511199289384/lover_tree.png?width=635&height=635',
     'sundae tree ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942838854123622/sundae_tree.png?width=635&height=635',
     'water spirit ': 'https://media.discordapp.net/attachments/1085828261776457840/1114943035625709659/water_spirit.png?width=636&height=635',
-    'forest spirit ' : "https://media.discordapp.net/attachments/1085828261776457840/1114942320874373220/forest_spirit.png?width=636&height=635",
+    'forest spirit ': "https://media.discordapp.net/attachments/1085828261776457840/1114942320874373220/forest_spirit.png?width=636&height=635",
     'four-leaf clover ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942321352511598/four-leaf_clover.png?width=636&height=635',
     'weeping willow ': 'https://media.discordapp.net/attachments/1085828261776457840/1114943036506513458/weeping_willow.png?width=635&height=635',
     'celestial tree ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942021883400282/celestial_tree.png?width=636&height=635',
@@ -61,8 +61,8 @@ const treeMap = {
     'rafflesia ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942704388935740/rafflesia.png?width=635&height=635',
     'baobab ': 'https://media.discordapp.net/attachments/1085828261776457840/1114941850097303672/baobab.png?width=635&height=635',
     'maple ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942630363680948/maple.png?width=635&height=635',
-    'rose ':'https://media.discordapp.net/attachments/1085828261776457840/1114942703977898014/rose.png?width=635&height=635' ,
-    'sunflower ':'https://media.discordapp.net/attachments/1085828261776457840/1114942839240007781/sunflower.png?width=635&height=635' ,
+    'rose ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942703977898014/rose.png?width=635&height=635',
+    'sunflower ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942839240007781/sunflower.png?width=635&height=635',
     'candy tree ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942197473746975/candy_tree.png?width=635&height=635',
     'bamboo ': 'https://media.discordapp.net/attachments/1085828261776457840/1114941849166151710/bamboo.png?width=550&height=550',
     'watermelon ': 'https://media.discordapp.net/attachments/1085828261776457840/1114943036103864480/watermelon.png?width=635&height=635',
@@ -116,17 +116,17 @@ const treeMap = {
     'tinytan - j-hope (buttercup) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942840057901076/tinytan_-_j-hope_buttercup.png?width=635&height=635',
     'tinytan - jimin (spirea) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942915299508325/tinytan_-_jimin_spirea.png?width=635&height=635',
     'TinyTAN - V (Wintersweet) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942917736407131/tinytan_-_v_wintersweet.png?width=635&height=635',
-    'tinytan - jung kook (tiger flower) ':'https://media.discordapp.net/attachments/1085828261776457840/1114942916301947000/tinytan_-_jung_kook_tiger_flower.png?width=635&height=635' ,
-    'pear tree house ' : 'https://media.discordapp.net/attachments/1085828261776457840/1114942701369040976/pear_tree_house.png?width=635&height=635',
-    
+    'tinytan - jung kook (tiger flower) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942916301947000/tinytan_-_jung_kook_tiger_flower.png?width=635&height=635',
+    'pear tree house ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942701369040976/pear_tree_house.png?width=635&height=635',
+
 
 
 
 };
 const colorMap = {
-    '9th anniversary cake tree ' : 'E5BC6A',
-    '8th anniversary cake tree ' : 'B67F40',
-    '7th anniversary cake tree ':'EAB183',
+    '9th anniversary cake tree ': 'E5BC6A',
+    '8th anniversary cake tree ': 'B67F40',
+    '7th anniversary cake tree ': 'EAB183',
     '6th anniversary cake tree ': 'E3C7A4',
     'tinytan - rm (clematis) ': 'C5B3B3',
     'tinytan - jin (rumex) ': 'E5C8AE',
@@ -146,16 +146,16 @@ const colorMap = {
     'purple oak tree ': '9B75AE',
     'yellow oak tree ': 'E5B13F',
     'pink oak tree ': 'F4B8A4',
-    'blue oak tree ':'67ACCF',
+    'blue oak tree ': '67ACCF',
     'earth day tree ': '5890D0',
     'money tree ': 'E37D20',
-    
+
     'space tree ': 'FBBC74',
     'unicorn tree ': 'E8D0E9',
     'twilight guardian ': '35A0B5',
     'wishing tree ': 'C8D2DB',
     'cherry blossom ': 'F2CFDC',
-    'pumpkin ':'E18705',
+    'pumpkin ': 'E18705',
     'scarecrow ': '044686',
     'ginkgo ': 'EFAB10',
     'wisteria ': 'C19EDE',
@@ -174,20 +174,20 @@ const colorMap = {
     'celestial tree ': 'F3E0C7',
     'water spirit ': '6FD2DC',
     'sundae tree ': 'EDD0B2',
-    'forest spirit ' : '7AE0C9',
+    'forest spirit ': '7AE0C9',
     'lover tree ': 'DFA795',
-    'lily flower ':'F2EDC9',
-    'tulip ':'E9974C',
-    'plum blossom ':'F3A896',
-    
-    'lavender ':'9371D3',
-    
-    'golden wings ':'F3AF3E',
-    'golden trumpet tree ':'F2CA51',
-    
-    'cosmos ':'EDD8C3',
-    'narcissus ':'E9C451',
-    'pear tree house ' : 'E5B451',
+    'lily flower ': 'F2EDC9',
+    'tulip ': 'E9974C',
+    'plum blossom ': 'F3A896',
+
+    'lavender ': '9371D3',
+
+    'golden wings ': 'F3AF3E',
+    'golden trumpet tree ': 'F2CA51',
+
+    'cosmos ': 'EDD8C3',
+    'narcissus ': 'E9C451',
+    'pear tree house ': 'E5B451',
 
 
 
@@ -259,71 +259,82 @@ client.on(Events.InteractionCreate, async interaction => {
         }
         if (!space) myArray.push(cur);
         var roomName = "", i = 20;
-        while (i < myArray.length && myArray[i] !== "with") roomName += myArray[i++]+" ";
-        const link_forest = new ActionRowBuilder()
-            .addComponents(
-                new ButtonBuilder()
-                    .setLabel('Join!')
-                    .setStyle(ButtonStyle.Link)
-                    .setURL(`${myArray[myArray.length - 1]}`),
-                new ButtonBuilder()
-                    .setCustomId('delete_session_id')
-                    .setLabel('delete')
-                    .setEmoji('🗑️')
-                    .setStyle(ButtonStyle.Danger)
-            );
-        const embed_forest = new EmbedBuilder()
-            .setColor(colorMap[roomName.toLowerCase()] !== undefined ? colorMap[roomName.toLowerCase()] : '81B622')
-            .setTitle(`**${myArray[19]} ${roomName}**`)
-            .setAuthor({
-                name: `${member}`,
-                iconURL: `${member_icon}`
-            })
-            .addFields(
-                { name: 'code', value: `${myArray[15]}`},
-                { name: 'starting in', value: `${forest_timing} minutes \n ➡️ <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
-                { name: 'ends in', value: `${myArray[19].split("-")[0]} ${myArray[19].split("-")[1]}s \n ➡️ <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes()+parseInt(myArray[19].split("-")[0])+parseInt(forest_timing)).valueOf()/1000}:t>`, inline: true },
-                forest_pom ? {name: 'pomodoro stage', value: `${forest_pom}`, inline: true} : {name: 'pomodoro stage', value: `NA`, inline: true},
-            )
-            .addFields(
-                { name: 'host', value: `<@${member_tag}>` },
-            )
-            .addFields(
-                forest_addrem ? { name: 'additional remarks', value: `${forest_addrem}` } : { name: 'additional remarks', value: `NA`, inline: true },
-            )
-            .setThumbnail(treeMap[roomName.toLowerCase()] !== undefined ? treeMap[roomName.toLowerCase()] : 'https://media.discordapp.net/attachments/1085828261776457840/1121717585071845426/icons8-forest-94.png?width=129&height=129')
-            .setImage(
-                fsi ? `${fsi}`: `https://media.discordapp.net/attachments/1085828261776457840/1114045247488528`
-            )
-            .setTimestamp()
-            .setFooter({
-                text: 'join via copy and paste the code or by clicking the link below! \n and please dont click delete on someone elses session' ,
-                iconURL: 'https://media.discordapp.net/attachments/1085828261776457840/1121717585071845426/icons8-forest-94.png?width=129&height=129'
+        while (i < myArray.length && myArray[i] !== "with") roomName += myArray[i++] + " ";
+        try {
+            const link_forest = new ActionRowBuilder()
+                .addComponents(
+                    new ButtonBuilder()
+                        .setLabel('Join!')
+                        .setStyle(ButtonStyle.Link)
+                        .setURL(`${myArray[myArray.length - 1]}`),
+                    new ButtonBuilder()
+                        .setCustomId('delete_session_id')
+                        .setLabel('delete')
+                        .setEmoji('🗑️')
+                        .setStyle(ButtonStyle.Danger)
+                );
+            const embed_forest = new EmbedBuilder()
+                .setColor(colorMap[roomName.toLowerCase()] !== undefined ? colorMap[roomName.toLowerCase()] : '81B622')
+                .setTitle(`**${myArray[19]} ${roomName}**`)
+                .setAuthor({
+                    name: `${member}`,
+                    iconURL: `${member_icon}`
+                })
+                .addFields(
+                    { name: 'code', value: `${myArray[15]}` },
+                    { name: 'starting in', value: `${forest_timing} minutes \n ➡️ <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes() + parseInt(forest_timing)).valueOf() / 1000}:t>`, inline: true },
+                    { name: 'ends in', value: `${myArray[19].split("-")[0]} ${myArray[19].split("-")[1]}s \n ➡️ <t:${new Date(curTime.getFullYear(), curTime.getMonth(), curTime.getDate(), curTime.getHours(), curTime.getMinutes() + parseInt(myArray[19].split("-")[0]) + parseInt(forest_timing)).valueOf() / 1000}:t>`, inline: true },
+                    forest_pom ? { name: 'pomodoro stage', value: `${forest_pom}`, inline: true } : { name: 'pomodoro stage', value: `NA`, inline: true },
+                )
+                .addFields(
+                    { name: 'host', value: `<@${member_tag}>` },
+                )
+                .addFields(
+                    forest_addrem ? { name: 'additional remarks', value: `${forest_addrem}` } : { name: 'additional remarks', value: `NA`, inline: true },
+                )
+                .setThumbnail(treeMap[roomName.toLowerCase()] !== undefined ? treeMap[roomName.toLowerCase()] : 'https://media.discordapp.net/attachments/1085828261776457840/1121717585071845426/icons8-forest-94.png?width=129&height=129')
+                .setImage(
+                    fsi ? `${fsi}` : `https://media.discordapp.net/attachments/1085828261776457840/1114045247488528`
+                )
+                .setTimestamp()
+                .setFooter({
+                    text: 'join via copy and paste the code or by clicking the link below! \n and please dont click delete on someone elses session',
+                    iconURL: 'https://media.discordapp.net/attachments/1085828261776457840/1121717585071845426/icons8-forest-94.png?width=129&height=129'
+                });
+            const event_sucess = new EmbedBuilder()
+                .addFields({
+                    name: '✅Sucess', value: 'your session has been posted to <#1010629360648212601> sucessfully! \n go to the embed to delete your session'
+                })
+                .setColor('CDD193')
+            const reply = await interaction.reply({
+                embeds: [event_sucess], ephemeral: true
+
             });
-        const event_sucess = new EmbedBuilder()
-        .addFields({
-            name: '✅Sucess', value: 'your session has been posted to <#1010629360648212601> sucessfully! \n go to the embed to delete your session'
-        })
-        .setColor('CDD193')
-        const reply= await interaction.reply({
-            embeds: [event_sucess], ephemeral: true
-            
-        });
-        setTimeout(() => {
-            reply.delete().catch(console.error);
-        }, 10000);
-        const channel = client.channels.cache.get("1010629360648212601");
-        await channel.send({ content: `<@&1010631146679316480>`, embeds: [embed_forest], components: [link_forest]});
+            setTimeout(() => {
+                reply.delete().catch(console.error);
+            }, 10000);
+            const channel = client.channels.cache.get("1010629360648212601");
+            await channel.send({ content: `<@&1010631146679316480>`, embeds: [embed_forest], components: [link_forest] });
+        } catch (err) {
+            const error = new String(err.message);
+            console.log(error);
+            if (error.search("ColorConvert") !== -1) {
+                // show error to user that color is invalid
+            } else if (error.search("Invalid URL") !== -1) {
+                // show error to user that url is invalid
+            } else {
+                // ignore
+            }
+        }
     }
 })
 
 client.on(Events.InteractionCreate, async (interaction) => {
     if (interaction.isButton()) {
         if (interaction.customId === 'forest_session_event') {
-            const forest_info_modal= new ModalBuilder()
-            .setCustomId("modal_id")
-            .setTitle("create your forest session");
-            
+            const forest_info_modal = new ModalBuilder()
+                .setCustomId("modal_id")
+                .setTitle("create your forest session");
             const forest_link = new TextInputBuilder()
                 .setCustomId('forest_link')
                 .setRequired(true)
