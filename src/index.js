@@ -317,6 +317,7 @@ client.on(Events.InteractionCreate, async interaction => {
             await channel.send({ content: `<@&1010631146679316480>`, embeds: [embed_forest], components: [link_forest] });
         } catch (err) {
             const error = new String(err.message);
+            console.log("Error on modal submit:");
             console.log(error);
             if (error.search("ColorConvert") !== -1) {
                 // show error to user that color is invalid
@@ -375,6 +376,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
             const submitted = interaction.awaitModalSubmit({
                 time: 60000
             }).catch(error => {
+                console.log("Error in modal creation:");
                 console.log(error);
                 return null;
             });
