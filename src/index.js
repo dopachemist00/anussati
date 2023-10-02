@@ -115,9 +115,10 @@ const treeMap = {
     'tinytan - suga (larch) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942917321166949/tinytan_-_suga_larch.png?width=635&height=635',
     'tinytan - j-hope (buttercup) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942840057901076/tinytan_-_j-hope_buttercup.png?width=635&height=635',
     'tinytan - jimin (spirea) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942915299508325/tinytan_-_jimin_spirea.png?width=635&height=635',
-    'TinyTAN - V (Wintersweet) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942917736407131/tinytan_-_v_wintersweet.png?width=635&height=635',
+    'tinyTAN - v (wintersweet) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942917736407131/tinytan_-_v_wintersweet.png?width=635&height=635',
     'tinytan - jung kook (tiger flower) ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942916301947000/tinytan_-_jung_kook_tiger_flower.png?width=635&height=635',
     'pear tree house ': 'https://media.discordapp.net/attachments/1085828261776457840/1114942701369040976/pear_tree_house.png?width=635&height=635',
+    'jacaranda ' : 'https://media.discordapp.net/attachments/1104446880919859300/1157015802533380176/jacaranda.png?ex=651b06ef&is=6519b56f&hm=53c25e746a5bfb0df1a4149d1aa0a91fec9e17f082e0c1bed9c9ff2d76318d20&=&width=635&height=635',
 
 
 
@@ -133,7 +134,7 @@ const colorMap = {
     'tinytan - suga (larch) ': 'C9D2CF',
     'tinytan - j-hope (buttercup) ': '5CD90',
     'tinytan - jimin (spirea) ': 'E5D7AC',
-    'tinytan - V (wintersweet) ': 'CCBEA8',
+    'tinytan - v (wintersweet) ': 'CCBEA8',
     'tinytan - jung kook (tiger flower) ': 'E2AD81',
     'strawberry chiffon cake ': 'F4B6AF',
     'blueberry cake ': 'DFC3C9',
@@ -188,6 +189,7 @@ const colorMap = {
     'cosmos ': 'EDD8C3',
     'narcissus ': 'E9C451',
     'pear tree house ': 'E5B451',
+    'jacaranda ': 'B998DB',
 
 
 
